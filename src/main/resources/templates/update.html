@@ -15,7 +15,7 @@
 
     <!-- todo:  add form-->
     <div id="form" class="form">
-       <form th:action="@{/todoUpdate}" th:object="${editedTodo}" method="post">
+       <form th:action="@{/todoUpdate/{id}(id = ${editedTodo.id})}" th:object="${editedTodo}" method="post">
            <input type="text" name="name" th:value="${editedTodo.name}">
            <button type="submit">Update</button>
        </form>
