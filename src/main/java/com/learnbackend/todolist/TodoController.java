@@ -45,7 +45,7 @@ public class TodoController {
         return "update";
     }
 
-    @PostMapping("/todoUpdate/{id}")
+    @PostMapping("/todoUpdate")
     public String updateTodo( @PathVariable(value = "id") int id ,@ModelAttribute Todo todo, Model model) {
         model.addAttribute("editedTodo", todo);
         System.out.println("Edited todo " + todo.getName());

@@ -13,6 +13,9 @@ public class ToDoServiceImpl implements TodoService{
     List<Todo> todos = new ArrayList<>();
     @Override
     public List<Todo> getAllTodos() {
+        for (Todo todo: todos) {
+            System.out.println("Name: " + todo.getName() + " ID: " + todo.getId());
+        }
         return todos;
     }
 
